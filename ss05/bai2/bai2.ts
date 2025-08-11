@@ -18,7 +18,7 @@ class Student {
 
 // Khai báo mảng chứa các sinh viên
 let students: Student[] = [];
-
+ 
 // Tạo các thực thể sinh viên và lưu vào mảng
 students.push(new Student(1, 20, "huy@example.com"));
 students.push(new Student(2, 21, "lan@example.com"));
