@@ -10,7 +10,7 @@ class Vehicle {
         this.id = id;
     }
 
-    // Tăng tốc độ
+// Tăng tốc độ
     public speedUp(amount: number): void {
         this.speed += amount;
         console.log(`${this.name} đã tăng tốc thêm ${amount} km/h`);
