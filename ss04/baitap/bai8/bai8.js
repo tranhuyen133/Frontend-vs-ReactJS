@@ -1,25 +1,26 @@
-// Hàm tính tổng giá trị đơn hàng
+// Hàm tính tổng giá t
+// \rị đơn hàng
 function calculateOrderTotal(order) {
-    return order.items.reduce(function (total, item) {
+    return order.items.reduce((total, item) => {
         return total + item.price * item.quantity;
     }, 0);
 }
 // Hàm in thông tin đơn hàng
 function printOrder(order) {
-    console.log(" \u0110\u01A1n h\u00E0ng: ".concat(order.orderId));
-    console.log(" Kh\u00E1ch h\u00E0ng: ".concat(order.customerName));
-    console.log(" Danh s\u00E1ch s\u1EA3n ph\u1EA9m:");
-    order.items.forEach(function (item, index) {
-        console.log("  ".concat(index + 1, ". ").concat(item.productName, " - ").concat(item.quantity, " x ").concat(item.price, " = ").concat(item.quantity * item.price));
+    console.log(` Đơn hàng: ${order.orderId}`);
+    console.log(` Khách hàng: ${order.customerName}`);
+    console.log(` Danh sách sản phẩm:`);
+    order.items.forEach((item, index) => {
+        console.log(`  ${index + 1}. ${item.productName} - ${item.quantity} x ${item.price} = ${item.quantity * item.price}`);
     });
-    var total = calculateOrderTotal(order);
-    console.log(" T\u1ED5ng ti\u1EC1n: ".concat(total, " VND"));
+    const total = calculateOrderTotal(order);
+    console.log(` Tổng tiền: ${total} VND`);
     if (order.note) {
-        console.log(" Ghi ch\u00FA: ".concat(order.note));
+        console.log(` Ghi chú: ${order.note}`);
     }
     console.log("================================");
 }
-var exampleOrder = {
+const exampleOrder = {
     orderId: "ORD001",
     customerName: "Nguyễn Văn A",
     items: [
@@ -39,3 +40,5 @@ var exampleOrder = {
     note: "Giao hàng trong giờ hành chính.",
 };
 printOrder(exampleOrder);
+export {};
+//# sourceMappingURL=bai8.js.map

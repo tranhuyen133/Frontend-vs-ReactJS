@@ -1,89 +1,72 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 // Lớp cha Animal
-var Animal = /** @class */ (function () {
-    function Animal(name, age, species) {
+class Animal {
+    name;
+    age;
+    species;
+    constructor(name, age, species) {
         this.name = name;
         this.age = age;
         this.species = species;
     }
-    Animal.prototype.speak = function () {
-        console.log("".concat(this.name, " makes a sound."));
-    };
-    Animal.prototype.getName = function () {
+    speak() {
+        console.log(`${this.name} makes a sound.`);
+    }
+    getName() {
         return this.name;
-    };
-    Animal.prototype.setName = function (n) {
+    }
+    setName(n) {
         this.name = n;
-    };
-    Animal.prototype.getAge = function () {
+    }
+    getAge() {
         return this.age;
-    };
-    Animal.prototype.setAge = function (a) {
+    }
+    setAge(a) {
         this.age = a;
-    };
-    return Animal;
-}());
+    }
+}
 // Lớp Dog kế thừa từ Animal
-var Dog = /** @class */ (function (_super) {
-    __extends(Dog, _super);
-    function Dog(name, age, breed) {
-        var _this = _super.call(this, name, age, "Dog") || this;
-        _this.breed = breed;
-        return _this;
+class Dog extends Animal {
+    breed;
+    constructor(name, age, breed) {
+        super(name, age, "Dog");
+        this.breed = breed;
     }
-    Dog.prototype.speak = function () {
+    speak() {
         console.log("Woof");
-    };
-    return Dog;
-}(Animal));
+    }
+}
 // Lớp Cat kế thừa từ Animal
-var Cat = /** @class */ (function (_super) {
-    __extends(Cat, _super);
-    function Cat(name, age, breed) {
-        var _this = _super.call(this, name, age, "Cat") || this;
-        _this.breed = breed;
-        return _this;
+class Cat extends Animal {
+    breed;
+    constructor(name, age, breed) {
+        super(name, age, "Cat");
+        this.breed = breed;
     }
-    Cat.prototype.speak = function () {
+    speak() {
         console.log("Meow");
-    };
-    return Cat;
-}(Animal));
-// Lớp Rabbit kế thừa từ Animal
-var Rabbit = /** @class */ (function (_super) {
-    __extends(Rabbit, _super);
-    function Rabbit(name, age, breed) {
-        var _this = _super.call(this, name, age, "Rabbit") || this;
-        _this.breed = breed;
-        return _this;
     }
-    Rabbit.prototype.speak = function () {
+}
+// Lớp Rabbit kế thừa từ Animal
+class Rabbit extends Animal {
+    breed;
+    constructor(name, age, breed) {
+        super(name, age, "Rabbit");
+        this.breed = breed;
+    }
+    speak() {
         console.log("Squeak");
-    };
-    return Rabbit;
-}(Animal));
+    }
+}
 // --- Sử dụng ---
-var dog = new Dog("Buddy", 3, "Golden Retriever");
-var cat = new Cat("Mittens", 2, "Siamese");
-var rabbit = new Rabbit("Thumper", 1, "Mini Lop");
+const dog = new Dog("Buddy", 3, "Golden Retriever");
+const cat = new Cat("Mittens", 2, "Siamese");
+const rabbit = new Rabbit("Thumper", 1, "Mini Lop");
 dog.speak(); // Woof
 cat.speak(); // Meow
 rabbit.speak(); // Squeak
-console.log("".concat(dog.getName(), " - Age: ").concat(dog.getAge(), " - Breed: ").concat(dog.breed));
+console.log(`${dog.getName()} - Age: ${dog.getAge()} - Breed: ${dog.breed}`);
 dog.setAge(4);
-console.log("After birthday: ".concat(dog.getName(), " is now ").concat(dog.getAge(), " years old."));
-console.log("".concat(cat.getName(), " - Species: ").concat(cat.species, " - Breed: ").concat(cat.breed));
+console.log(`After birthday: ${dog.getName()} is now ${dog.getAge()} years old.`);
+console.log(`${cat.getName()} - Species: ${cat.species} - Breed: ${cat.breed}`);
+export {};
+//# sourceMappingURL=BTTH.js.map

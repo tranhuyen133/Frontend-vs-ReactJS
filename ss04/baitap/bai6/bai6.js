@@ -7,22 +7,22 @@ function getFinalPrice(product) {
 }
 // Hàm in thông tin sản phẩm
 function printProductInfo(product) {
-    var finalPrice = getFinalPrice(product);
-    console.log("S\u1EA3n ph\u1EA9m: ".concat(product.name));
-    console.log("M\u00E3: ".concat(product.id));
-    console.log("Danh m\u1EE5c: ".concat(product.category.name));
-    console.log("Gi\u00E1 g\u1ED1c: ".concat(product.price, " VND"));
+    const finalPrice = getFinalPrice(product);
+    console.log(`Sản phẩm: ${product.name}`);
+    console.log(`Mã: ${product.id}`);
+    console.log(`Danh mục: ${product.category.name}`);
+    console.log(`Giá gốc: ${product.price} VND`);
     if (product.discount) {
-        console.log("Gi\u1EA3m gi\u00E1: ".concat(product.discount, "%"));
-        console.log("Gi\u00E1 sau gi\u1EA3m: ".concat(finalPrice, " VND"));
+        console.log(`Giảm giá: ${product.discount}%`);
+        console.log(`Giá sau giảm: ${finalPrice} VND`);
     }
     else {
-        console.log("Kh\u00F4ng c\u00F3 khuy\u1EBFn m\u00E3i.");
+        console.log(`Không có khuyến mãi.`);
     }
     console.log('----------------------------');
 }
 // Danh sách sản phẩm mẫu
-var listProduct = [
+const listProduct = [
     {
         id: "P001",
         name: "Áo Thun Nam",
@@ -54,3 +54,5 @@ var listProduct = [
     }
 ];
 listProduct.forEach(printProductInfo);
+export {};
+//# sourceMappingURL=bai6.js.map

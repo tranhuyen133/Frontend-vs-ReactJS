@@ -3,14 +3,14 @@ function processInput(input) {
     if (typeof input === "string") {
         // Kiểm tra nếu toàn bộ là số (dùng regex /^[0-9]+$/)
         if (/^\d+$/.test(input)) {
-            var num = Number(input);
+            const num = Number(input);
             console.log(num * num); // In ra bình phương
         }
         else {
             // Đếm ký tự chữ cái (bỏ số và ký tự đặc biệt)
-            var letters = input.match(/[a-zA-Z]/g);
-            var count = letters ? letters.length : 0;
-            console.log("".concat(count, " k\u00FD t\u1EF1 ch\u1EEF c\u00E1i"));
+            const letters = input.match(/[a-zA-Z]/g);
+            const count = letters ? letters.length : 0;
+            console.log(`${count} ký tự chữ cái`);
         }
     }
     // Nếu input là number
@@ -36,7 +36,7 @@ function processInput(input) {
 function isPrime(n) {
     if (n < 2)
         return false;
-    for (var i = 2; i <= Math.sqrt(n); i++) {
+    for (let i = 2; i <= Math.sqrt(n); i++) {
         if (n % i === 0)
             return false;
     }
@@ -48,3 +48,5 @@ processInput(7); // Là số nguyên tố
 processInput(10); // Không phải số nguyên tố
 processInput(true); // Giá trị là true - tiến hành xử lý
 processInput(false); // Giá trị là false - dừng xử lý
+export {};
+//# sourceMappingURL=bai7.js.map

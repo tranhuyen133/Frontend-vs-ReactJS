@@ -11,9 +11,11 @@ var WeekDays;
 })(WeekDays || (WeekDays = {}));
 // 2. Hàm generic in tất cả giá trị của enum
 function printEnumValues(enumObj) {
-    Object.values(enumObj).forEach(function (value) {
+    Object.values(enumObj).forEach(value => {
         console.log(value);
     });
 }
 // Gọi hàm để in ra các ngày trong tuần
 printEnumValues(WeekDays);
+export {};
+//# sourceMappingURL=bai1.js.map

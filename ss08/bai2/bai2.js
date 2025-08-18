@@ -8,6 +8,8 @@ function checkBoolean(value) {
     }
 }
 // 2. Khai báo biến boolean
-var isGreeting = true;
+let isGreeting = true;
 // 3. Gọi hàm generic
 checkBoolean(isGreeting);
+export {};
+//# sourceMappingURL=bai2.js.map

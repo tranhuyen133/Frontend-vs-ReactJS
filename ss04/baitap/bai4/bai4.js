@@ -2,7 +2,7 @@
 function handleUnionType(value) {
     if (typeof value === "string") {
         // Nếu là chuỗi, in ra số ký tự
-        console.log("".concat(value.length, " k\u00FD t\u1EF1"));
+        console.log(`${value.length} ký tự`);
     }
     else if (typeof value === "number") {
         // Nếu là số, kiểm tra chẵn/lẻ
@@ -17,7 +17,8 @@ function handleUnionType(value) {
         console.log("Kiểu dữ liệu không hợp lệ");
     }
 }
-// Gọi thử hàm với cả hai kiểu
 handleUnionType("demo123"); // 7 ký tự
 handleUnionType(10); // Đây là số chẵn
 handleUnionType(9); // Đây là số lẻ
+export {};
+//# sourceMappingURL=bai4.js.map

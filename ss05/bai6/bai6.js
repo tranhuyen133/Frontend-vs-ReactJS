@@ -1,40 +1,38 @@
 // Lớp Book với tính đóng gói
-var Book = /** @class */ (function () {
-    function Book(title, author) {
+class Book {
+    title;
+    author;
+    constructor(title, author) {
         this.title = title;
         this.author = author;
     }
     // Getter để lấy thông tin sách
-    Book.prototype.getInfo = function () {
-        return "".concat(this.title, " - ").concat(this.author);
-    };
-    return Book;
-}());
-// Lớp Library quản lý mảng sách
-var Library = /** @class */ (function () {
-    function Library() {
-        this.books = [];
+    getInfo() {
+        return `${this.title} - ${this.author}`;
     }
+}
+// Lớp Library quản lý mảng sách
+class Library {
+    books = [];
     // Thêm sách vào thư viện
-    Library.prototype.addBook = function (book) {
+    addBook(book) {
         this.books.push(book);
-    };
+    }
     // Xem danh sách sách trong thư viện
-    Library.prototype.showBooks = function () {
+    showBooks() {
         console.log("Danh sách sách trong thư viện:");
-        this.books.forEach(function (book, index) {
-            console.log("".concat(index + 1, ". ").concat(book.getInfo()));
+        this.books.forEach((book, index) => {
+            console.log(`${index + 1}. ${book.getInfo()}`);
         });
-    };
-    return Library;
-}());
+    }
+}
 // --- Sử dụng ---
-var book1 = new Book("Dế Mèn Phiêu Lưu Ký", "Tô Hoài");
-var book2 = new Book("Lão Hạc", "Nam Cao");
-var book3 = new Book("Tắt Đèn", "Ngô Tất Tố");
-var book4 = new Book("Số Đỏ", "Vũ Trọng Phụng");
-var book5 = new Book("Tuổi Thơ Dữ Dội", "Phùng Quán");
-var library = new Library();
+const book1 = new Book("Dế Mèn Phiêu Lưu Ký", "Tô Hoài");
+const book2 = new Book("Lão Hạc", "Nam Cao");
+const book3 = new Book("Tắt Đèn", "Ngô Tất Tố");
+const book4 = new Book("Số Đỏ", "Vũ Trọng Phụng");
+const book5 = new Book("Tuổi Thơ Dữ Dội", "Phùng Quán");
+const library = new Library();
 // Thêm sách vào thư viện
 library.addBook(book1);
 library.addBook(book2);
@@ -43,3 +41,5 @@ library.addBook(book4);
 library.addBook(book5);
 // Xem danh sách
 library.showBooks();
+export {};
+//# sourceMappingURL=bai6.js.map

@@ -1,15 +1,17 @@
-var num1 = 20;
-var num2 = 5;
-var num3;
-var num4 = "10";
-var num5 = true;
+let num1 = 20;
+let num2 = 5;
+let num3;
+let num4 = "10";
+let num5 = true;
 num3 = num1 + num2;
-console.log("C\u1ED9ng: ".concat(num1, " + ").concat(num2, " = ").concat(num3));
+console.log(`Cộng: ${num1} + ${num2} = ${num3}`);
 num3 = num1 - num2;
-console.log("Tr\u1EEB: ".concat(num1, " - ").concat(num2, " = ").concat(num3));
+console.log(`Trừ: ${num1} - ${num2} = ${num3}`);
 num3 = num1 * num2;
-console.log("Nh\u00E2n: ".concat(num1, " * ").concat(num2, " = ").concat(num3));
+console.log(`Nhân: ${num1} * ${num2} = ${num3}`);
 num3 = num1 / num2;
-console.log("Chia: ".concat(num1, " / ").concat(num2, " = ").concat(num3));
-var result = num4 + num5;
-console.log("C\u1ED9ng chu\u1ED7i v\u00E0 boolean: ".concat(num4, " + ").concat(num5, " = ").concat(result));
+console.log(`Chia: ${num1} / ${num2} = ${num3}`);
+let result = num4 + num5;
+console.log(`Cộng chuỗi và boolean: ${num4} + ${num5} = ${result}`);
+export {};
+//# sourceMappingURL=bai6.js.map

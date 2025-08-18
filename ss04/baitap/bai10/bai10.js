@@ -1,32 +1,32 @@
 // 1. Hàm trả danh sách học viên đã hoàn thành
 function getCompletedStudents(course) {
-    return course.students.filter(function (student) { return student.hasCompleted; });
+    return course.students.filter(student => student.hasCompleted);
 }
 // 2. Hàm tính điểm trung bình
 function calculateAverageScore(course) {
-    var completedWithScore = course.students.filter(function (s) { return typeof s.finalScore === "number"; });
+    const completedWithScore = course.students.filter(s => typeof s.finalScore === "number");
     if (completedWithScore.length === 0)
         return null;
-    var total = completedWithScore.reduce(function (sum, s) { var _a; return sum + ((_a = s.finalScore) !== null && _a !== void 0 ? _a : 0); }, 0);
+    const total = completedWithScore.reduce((sum, s) => sum + (s.finalScore ?? 0), 0);
     return total / completedWithScore.length;
 }
 // 3. Hàm in báo cáo khóa học
 function printCourseReport(manager) {
-    console.log("Tr\u01B0\u1EDDng: ".concat(manager.schoolName, " - N\u0103m: ").concat(manager.year));
+    console.log(`Trường: ${manager.schoolName} - Năm: ${manager.year}`);
     console.log("===== DANH SÁCH KHÓA HỌC =====");
-    manager.courses.forEach(function (course) {
-        console.log("Kh\u00F3a h\u1ECDc: ".concat(course.title, " (ID: ").concat(course.courseId, ")"));
-        console.log("Gi\u1EA3ng vi\u00EAn: ".concat(course.instructor));
-        console.log("Tr\u1EA1ng th\u00E1i: ".concat(course.isActive ? "Đang mở" : "Đã đóng"));
-        var completedStudents = getCompletedStudents(course);
-        console.log("S\u1ED1 h\u1ECDc vi\u00EAn \u0111\u00E3 ho\u00E0n th\u00E0nh: ".concat(completedStudents.length));
-        var avgScore = calculateAverageScore(course);
-        console.log("\u0110i\u1EC3m trung b\u00ECnh: ".concat(avgScore !== null ? avgScore.toFixed(2) : "Chưa có"));
+    manager.courses.forEach(course => {
+        console.log(`Khóa học: ${course.title} (ID: ${course.courseId})`);
+        console.log(`Giảng viên: ${course.instructor}`);
+        console.log(`Trạng thái: ${course.isActive ? "Đang mở" : "Đã đóng"}`);
+        const completedStudents = getCompletedStudents(course);
+        console.log(`Số học viên đã hoàn thành: ${completedStudents.length}`);
+        const avgScore = calculateAverageScore(course);
+        console.log(`Điểm trung bình: ${avgScore !== null ? avgScore.toFixed(2) : "Chưa có"}`);
         console.log("----------------------------");
     });
 }
 // ====== Ví dụ dữ liệu ======
-var manager = {
+const manager = {
     schoolName: "Trường CNTT",
     year: 2025,
     courses: [
@@ -54,3 +54,5 @@ var manager = {
 };
 // Chạy thử
 printCourseReport(manager);
+export {};
+//# sourceMappingURL=bai10.js.map

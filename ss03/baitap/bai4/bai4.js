@@ -1,4 +1,6 @@
-var a = "2";
-var b = 2;
-console.log(Number(a) == b); // true, rõ ràng ép kiểu
-console.log(Number(a) === b); // true, vì cả 2 đều là number
+let a = "2";
+let b = 2;
+console.log(Number(a) == b); // true
+console.log(Number(a) === b); // true
+export {};
+//# sourceMappingURL=bai4.js.map

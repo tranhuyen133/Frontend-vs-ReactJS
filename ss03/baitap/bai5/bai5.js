@@ -1,11 +1,13 @@
 function capitalize(str) {
     if (!str)
-        return ""; 
+        return "";
     return str[0].toUpperCase() + str.slice(1).toLowerCase();
 }
-var firstName = "john";
-var lastName = "doe";
+let firstName = "john";
+let lastName = "doe";
 firstName = capitalize(firstName);
 lastName = capitalize(lastName);
-var fullName = "".concat(firstName, " ").concat(lastName);
+let fullName = `${firstName} ${lastName}`;
 console.log("Họ và tên đầy đủ:", fullName);
+export {};
+//# sourceMappingURL=bai5.js.map
