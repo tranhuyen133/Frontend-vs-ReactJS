@@ -16,7 +16,7 @@ function Calculation() {
       <h2>Kết quả phép tính</h2>
       <p>{num1} + {num2} = {add(num1, num2)}</p>
       <p>{num1} - {num2} = {subtract(num1, num2)}</p>
-      <p>{num1} × {num2} = {multiply(num1, num2)}</p>
+      <p>{num1} x {num2} = {multiply(num1, num2)}</p>
       <p>{num1} ÷ {num2} = {divide(num1, num2)}</p>
     </div>
   );
