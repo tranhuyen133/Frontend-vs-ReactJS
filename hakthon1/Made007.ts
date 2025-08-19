@@ -16,6 +16,7 @@ class Customer {
     getDetails(): string {
         return `ID: ${this.id}, Name: ${this.name}, Email: ${this.email}, Phone: ${this.phone}`;
     }
+    
 }
 
 abstract class Vehicle {

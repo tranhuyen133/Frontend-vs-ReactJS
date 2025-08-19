@@ -88,7 +88,7 @@ class GenericRepository<T> {
     remove(predicate: (item: T) => boolean): void { this.items = this.items.filter(i => !predicate(i)); }
 }
 
-// ===================== AIRLINE MANAGER =====================
+\
 
 class AirlineManager {
     private flightRepo = new GenericRepository<Flight>();
