@@ -1,9 +1,9 @@
 import React from "react";
-import ListCourse from "./components/ListCourse";
-import Calculation from "./components/Calculation";
-import UserInfo from "./components/UserInfo";
-import ColorBox from "./components/ColorBox";
-import FormatName from "./components/FormatName";
+import ListCourse from "./components/Bai1/ListCourse";
+import Calculation from "./components/Bai2/Calculation";
+import UserInfo from "./components/Bai3/UserInfo";
+import ColorBox from "./components/Bai4/ColorBox";
+import FormatName from "./components/Bai5/FormatName";
 
 function App() {
   return (
