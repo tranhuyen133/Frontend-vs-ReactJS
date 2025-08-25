@@ -1,59 +1,96 @@
+/* Style chung cho button */
 .btn {
-  padding: 8px 16px;
-  margin: 5px;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
+  display: inline-block;
   font-weight: 500;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none; /* dùng cho thẻ a */
 }
 
-/* Các style theo variant */
-.primary {
+/* Primary */
+.btn-primary {
   background-color: #0d6efd;
   color: white;
 }
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
 
-.secondary {
+/* Secondary */
+.btn-secondary {
   background-color: #6c757d;
   color: white;
 }
+.btn-secondary:hover {
+  background-color: #5c636a;
+}
 
-.success {
+/* Success */
+.btn-success {
   background-color: #198754;
   color: white;
 }
+.btn-success:hover {
+  background-color: #157347;
+}
 
-.warning {
+/* Warning */
+.btn-warning {
   background-color: #ffc107;
   color: black;
 }
+.btn-warning:hover {
+  background-color: #e0a800;
+}
 
-.danger {
+/* Danger */
+.btn-danger {
   background-color: #dc3545;
   color: white;
 }
+.btn-danger:hover {
+  background-color: #bb2d3b;
+}
 
-.info {
+/* Info */
+.btn-info {
   background-color: #0dcaf0;
   color: black;
 }
-
-.light {
-  background-color: #f8f9fa;
-  color: black;
-  border: 1px solid #ddd;
+.btn-info:hover {
+  background-color: #31d2f2;
 }
 
-.dark {
+/* Light */
+.btn-light {
+  background-color: #f8f9fa;
+  color: black;
+  border: 1px solid #dee2e6;
+}
+.btn-light:hover {
+  background-color: #e2e6ea;
+}
+
+/* Dark */
+.btn-dark {
   background-color: #212529;
   color: white;
 }
+.btn-dark:hover {
+  background-color: #1c1f23;
+}
 
-.link {
+/* Link */
+.btn-link {
   background: none;
-  border: none;
   color: #0d6efd;
+  padding: 0;
+}
+.btn-link:hover {
   text-decoration: underline;
-  cursor: pointer;
 }

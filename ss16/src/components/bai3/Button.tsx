@@ -1,23 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import "./Button.css"
-type ButtonProps={
-    children: React.ReactNode;
-    variant?:
-     "primary" 
-    | "secondary" 
-    | "success" 
-    | "warning" 
-    | "danger" 
-    | "info" 
-    | "light" 
-    | "dark" 
-    | "link";
-}
-function Button ({children, variant = "primary"}: ButtonProps) {
+class Button extends Component {
+    render() {
         return (
-            <button className={`btn ${variant}`}>
-                {children}   
-            </button>
+            <div>
+            <h2>Các loại Button</h2>
+            <button className="btn btn-primary">Primary</button>
+            <button className="btn btn-secondary">Secondary</button>
+            <button className="btn btn-success">Success</button>
+            <button className="btn btn-warning">Warning</button>
+            <button className="btn btn-danger">Danger</button>
+            <a href="#" className="btn btn-link">Link</a>
+            </div>
         );
     }
+}
+
 export default Button;

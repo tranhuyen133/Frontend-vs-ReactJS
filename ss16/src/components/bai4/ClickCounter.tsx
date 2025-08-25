@@ -4,8 +4,8 @@ type StateType = {
   count: number;
 };
 
-export default class ClickCounter extends Component<{}, StateType> {
-  constructor(props: {}) {
+export default class ClickCounter extends Component<object, StateType> {
+  constructor(props: object) {
     super(props);
     this.state = {
       count: 0,
