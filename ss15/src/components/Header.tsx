@@ -27,6 +27,7 @@ class Header extends Component<PropsType, StateType> {
       check: !this.state.check
     });
   };
+  
   componentDidMount(): void {
       console.log("Component duoc gan vao giao dien");
       

@@ -1,0 +1,26 @@
+.container {
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.title {
+  color: rgb(6, 6, 6);
+  margin-bottom: 30px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  background-color: #dff6ff;
+  margin: 10px auto;
+  padding: 15px;
+  width: 200px;
+  border-radius: 12px;
+  font-size: 18px;
+  color: #0d47a1;
+  font-weight: 500;
+}
