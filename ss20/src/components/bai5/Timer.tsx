@@ -20,7 +20,7 @@ function Timer() {
 
   return (
     <div>
-      <h2>Bộ đếm thời gian</h2>
+      <h2>Bộ đếm thời gian</h2> 
       <p>Giá trị: {count}</p>
     </div>
   );
