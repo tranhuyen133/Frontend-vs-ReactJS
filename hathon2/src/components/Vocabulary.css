@@ -1,0 +1,82 @@
+.vocab-container {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.vocab-header {
+  background-color: #2f855a; 
+  color: white;
+  padding: 20px 24px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.vocab-form-box {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.vocab-list-box {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.vocab-section-title {
+  color: #2f855a;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ant-form-inline .ant-form-item {
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.custom-add-btn {
+  background-color: #2f855a;
+  border-color: #2f855a;
+}
+
+.custom-add-btn:hover {
+  background-color: #276749;
+  border-color: #276749;
+}
+
+.custom-edit-btn {
+  background-color: #3182ce;
+  border-color: #3182ce;
+  color: #fff;
+}
+
+.custom-delete-btn {
+  background-color: #e53e3e;
+  border-color: #e53e3e;
+  color: #fff;
+}
+
+.custom-edit-btn:hover {
+  background-color: #2b6cb0;
+  border-color: #2b6cb0;
+  color: #fff;
+}
+
+.custom-delete-btn:hover {
+  background-color: #c53030;
+  border-color: #c53030;
+  color: #fff;
+}
