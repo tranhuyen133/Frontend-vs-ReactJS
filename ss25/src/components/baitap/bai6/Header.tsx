@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./Header.css"; 
 
+
+
 export default function Header() {
   return (
     <nav style={{ display: "flex", gap: "20px", marginBottom: "20px" }}>
