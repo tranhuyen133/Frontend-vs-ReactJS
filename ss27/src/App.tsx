@@ -8,6 +8,8 @@ import ProductDetail from "./components/baitap/bai2/ProductDetail"
 import TaskList from "./components/baitap/bai3/TaskList"
 import TaskDetail from "./components/baitap/bai3/TaskDetail"
 import ListProduct from "./components/baitap/bai4/ListProduct"
+import Posts from "./components/baitap/bai5/Posts"
+import PostDetail from "./components/baitap/bai5/PostDetail"
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
         <Route path="/tasks" element={<TaskList />} />
         <Route path="/task/:id" element={<TaskDetail />} />
         <Route path="/productlist" element={<ListProduct/>}></Route>
+         <Route index element={<Navigate to="posts" replace />} />
+        <Route path="posts" element={<Posts />} />
+        <Route path="posts/:id" element={<PostDetail />} />
       </Routes>
     </Router>
   )
