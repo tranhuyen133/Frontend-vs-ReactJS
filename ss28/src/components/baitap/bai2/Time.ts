@@ -6,6 +6,7 @@ function delayedCallback(callback: Callback, delay: number): void {
     setTimeout(() => {
         callback();
     }, delay);
+    
 }
 
 // Callback ví dụ
