@@ -16,6 +16,7 @@ interface Todo {
   id: number;
   text: string;
   completed: boolean;
+  deleted: boolean;   
 }
 
 const API_URL = "http://localhost:3000/todos";
@@ -65,6 +66,7 @@ const App: React.FC = () => {
       id: Date.now(),
       text: text.trim(),
       completed: false,
+      deleted: false,   // ✅ mặc định chưa xóa
     };
     try {
       await axios.post(API_URL, newTodo);
@@ -77,7 +79,7 @@ const App: React.FC = () => {
     }
   };
 
-  // 🔹 Xóa công việc (Modal confirm)
+  // 🔹 Xóa công việc (chỉ đánh dấu deleted)
   const confirmDelete = (id: number, text: string) => {
     Modal.confirm({
       title: "Xác nhận",
@@ -86,9 +88,14 @@ const App: React.FC = () => {
       cancelText: "Hủy",
       onOk: async () => {
         try {
-          await axios.delete(`${API_URL}/${id}`);
-          setTodos(todos.filter((t) => t.id !== id));
-          message.success("Đã xóa");
+          const todo = todos.find((t) => t.id === id);
+          if (!todo) return;
+
+          const updated = { ...todo, deleted: true };  // ✅ đánh dấu deleted
+          await axios.put(`${API_URL}/${id}`, updated);
+
+          setTodos(todos.map((t) => (t.id === id ? updated : t)));
+          message.success("Đã đưa vào thùng rác");
         } catch {
           message.error("Lỗi khi xóa");
         }
@@ -152,7 +159,7 @@ const App: React.FC = () => {
 
   return (
     <div style={{ backgroundColor: "#fff", minHeight: "100vh", padding: "20px" }}>
-      <h1>Todo List</h1>
+      <h1 style={{ color: "black" }}>Todo List</h1>
 
       {/* Loading overlay */}
       {loading && (
@@ -192,7 +199,7 @@ const App: React.FC = () => {
           maxHeight: 250,
           overflowY: "auto",
         }}
-        dataSource={todos}
+        dataSource={todos.filter((t) => !t.deleted)}   // ✅ chỉ hiển thị chưa xóa
         renderItem={(item) => (
           <List.Item
             actions={[
@@ -211,9 +218,7 @@ const App: React.FC = () => {
             >
               <span
                 style={{
-                  textDecoration: item.completed
-                    ? "line-through"
-                    : "none",
+                  textDecoration: item.completed ? "line-through" : "none",
                 }}
               >
                 {item.text}

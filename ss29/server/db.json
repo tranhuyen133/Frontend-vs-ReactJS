@@ -1,5 +1,5 @@
 {
-  "product": [
+  "products": [
     {
       "id": 1,
       "product_name": "Laptop Dell XPS",
@@ -39,6 +39,53 @@
       "price": 3000000,
       "quantity": 12,
       "created_at": "2025-09-01T18:00:00Z"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "student_name": "Nguyễn Văn A",
+      "email": "vana@example.com",
+      "address": "Hà Nội",
+      "phone": "0123456789",
+      "status": true,
+      "created_at": "2025-09-15T08:30:00Z"
+    },
+    {
+      "id": 2,
+      "student_name": "Trần Thị B",
+      "email": "thib@example.com",
+      "address": "Đà Nẵng",
+      "phone": "0987654321",
+      "status": false,
+      "created_at": "2025-09-12T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "student_name": "Lê Văn C",
+      "email": "vanc@example.com",
+      "address": "TP. Hồ Chí Minh",
+      "phone": "0912345678",
+      "status": true,
+      "created_at": "2025-09-10T14:15:00Z"
+    },
+    {
+      "id": 4,
+      "student_name": "Phạm Thị D",
+      "email": "thid@example.com",
+      "address": "Hải Phòng",
+      "phone": "0934567890",
+      "status": true,
+      "created_at": "2025-09-08T09:45:00Z"
+    },
+    {
+      "id": 5,
+      "student_name": "Hoàng Văn E",
+      "email": "vane@example.com",
+      "address": "Cần Thơ",
+      "phone": "0976543210",
+      "status": false,
+      "created_at": "2025-09-05T16:20:00Z"
     }
   ]
 }
