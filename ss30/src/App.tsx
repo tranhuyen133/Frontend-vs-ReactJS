@@ -48,7 +48,7 @@ const App: React.FC = () => {
     getTodos();
   }, []);
 
-  // 🔹 Thêm công việc
+  //  Thêm công việc
   const addTodo = async () => {
     if (!text.trim()) {
       message.warning("Tên công việc không được để trống");
@@ -66,7 +66,7 @@ const App: React.FC = () => {
       id: Date.now(),
       text: text.trim(),
       completed: false,
-      deleted: false,   // ✅ mặc định chưa xóa
+      deleted: false,   //  mặc định chưa xóa
     };
     try {
       await axios.post(API_URL, newTodo);
@@ -79,7 +79,7 @@ const App: React.FC = () => {
     }
   };
 
-  // 🔹 Xóa công việc (chỉ đánh dấu deleted)
+  //  Xóa công việc (chỉ đánh dấu deleted)
   const confirmDelete = (id: number, text: string) => {
     Modal.confirm({
       title: "Xác nhận",
@@ -91,7 +91,7 @@ const App: React.FC = () => {
           const todo = todos.find((t) => t.id === id);
           if (!todo) return;
 
-          const updated = { ...todo, deleted: true };  // ✅ đánh dấu deleted
+          const updated = { ...todo, deleted: true };  //  đánh dấu deleted
           await axios.put(`${API_URL}/${id}`, updated);
 
           setTodos(todos.map((t) => (t.id === id ? updated : t)));

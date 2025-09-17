@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Giới thiệu ReactJS",
+      "image": "https://via.placeholder.com/150",
+      "content": "ReactJS là thư viện JavaScript phổ biến để xây dựng giao diện người dùng.",
+      "created_at": "2025-09-15",
+      "status": "Đã xuất bản"
+    },
+    {
+      "id": "2",
+      "title": "Hướng dẫn sử dụng Ant Design",
+      "image": "https://via.placeholder.com/150",
+      "content": "Ant Design là một UI library mạnh mẽ giúp phát triển giao diện nhanh chóng.",
+      "created_at": "2025-09-16",
+      "status": "Đã xuất bản"
+    },
+    {
+      "id": "3",
+      "title": "Bài viết bị chặn",
+      "image": "https://via.placeholder.com/150",
+      "content": "Nội dung này đã bị quản trị viên chặn.",
+      "created_at": "2025-09-17",
+      "status": "Ngừng xuất bản"
+    },
+    {
+      "id": "9127",
+      "title": "làm react js ",
+      "image": "https://images.search.yahoo.com/search/images;_ylt=Awr90v2L9MZms1YDFitXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZAMEc2VjA3Nj?type=E211US885G0&mkr=13&p=orange&fr=mcafee&th=314&tw=474&imgurl=https%3A%2F%2Fwww.thespruceeats.com%2Fthmb%2FBl53N53DySgYKRYriu4WZYI1Abg%3D%2F4288x2848%2Ffilters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%2FCut-Oranges-581b2b6f3df78cc2e81b4221.jpg&rurl=https%3A%2F%2Fwww.thespruceeats.com%2Ftypes-of-oranges-and-tangerines-2216772&size=1628KB&name=Guide+to+Types+of+Winter+Orange+and+Tangerines&oid=1&h=2848&w=4288&turl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.d1q8Aj9BvzGSbhCZYidw2gHaE6%26pid%3DApi&tt=Guide+to+Types+of+Winter+Orange+and+Tangerines&sigr=EOaJQ3ZZQpT1&sigit=BnF_7UlCXDg_&sigi=bJVvFsDuQhrP&sign=5ezqBbXUbFvt&sigt=5ezqBbXUbFvt",
+      "content": "jsdifhf",
+      "created_at": "2025-09-17",
+      "status": "Đã xuất bản"
+    }
+  ]
+}
