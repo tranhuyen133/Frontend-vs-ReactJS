@@ -5,7 +5,7 @@ import type { RootState } from "../utils/store";
 import { addStudent, updateStudent, deleteStudent } from "../utils/studentSlice";
 import StudentForm from "../components/StudentForm";
 import StudentList from "../components/StudentList";
-import Toolbar from "../components/Toolbar";  // 👈 thêm vào
+import Toolbar from "../components/Toolbar";  
 import type { Student } from "../utils/types";
 
 const StudentManagement = () => {
