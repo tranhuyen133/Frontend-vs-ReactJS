@@ -44,7 +44,7 @@ export const deleteTask = createAsyncThunk(
   }
 );
 
-// Cập nhật trạng thái completed
+// Cập nhật trạng thái 
 export const toggleTask = createAsyncThunk(
   "tasks/toggleTask",
   async (task: Task) => {
@@ -60,7 +60,6 @@ const taskSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      // Fetch
       .addCase(fetchTasks.pending, (state) => {
         state.loading = true;
       })
@@ -73,17 +72,14 @@ const taskSlice = createSlice({
         state.error = action.error.message || "Lỗi tải dữ liệu";
       })
 
-      // Add
       .addCase(addTask.fulfilled, (state, action: PayloadAction<Task>) => {
         state.tasks.push(action.payload);
       })
 
-      // Delete
       .addCase(deleteTask.fulfilled, (state, action: PayloadAction<number>) => {
         state.tasks = state.tasks.filter((t) => t.id !== action.payload);
       })
 
-      // Toggle
       .addCase(toggleTask.fulfilled, (state, action: PayloadAction<Task>) => {
         const index = state.tasks.findIndex((t) => t.id === action.payload.id);
         if (index !== -1) {

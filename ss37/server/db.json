@@ -1,0 +1,40 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Nguyễn Văn An",
+      "age": 16,
+      "grade": "10A1"
+    },
+    {
+      "id": "2",
+      "name": "Trần Thị Bình",
+      "age": 17,
+      "grade": "11B1"
+    },
+    {
+      "id": "3",
+      "name": "Lê Văn Cường",
+      "age": 15,
+      "grade": "10A2"
+    },
+    {
+      "id": "6e4f",
+      "name": "Học sinh mới",
+      "age": 18,
+      "grade": "12A"
+    },
+    {
+      "id": "942a",
+      "name": "Học sinh mới",
+      "age": 18,
+      "grade": "12A"
+    },
+    {
+      "id": "0af3",
+      "name": "Học sinh mới",
+      "age": 18,
+      "grade": "12A"
+    }
+  ]
+}
