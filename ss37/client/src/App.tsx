@@ -8,6 +8,7 @@ import {
   deleteStudent,
 } from "./features/students/studentSlice";
 import type { Student } from "./features/students/types";
+import "./App.css";
 
 const App: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
