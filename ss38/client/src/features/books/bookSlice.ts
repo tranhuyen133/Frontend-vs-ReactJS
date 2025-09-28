@@ -1,4 +1,3 @@
-// src/features/books/bookSlice.ts
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { Book } from "../../components/types";
 import * as api from "./bookAPI";
